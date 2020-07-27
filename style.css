@@ -1,0 +1,151 @@
+
+
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7eee9;
+    background-image: linear-gradient(62deg, rgb(9, 255, 202) 0%, #0004ffce 100%);
+    color: rgb(10, 10, 10);
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+
+
+header, form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button {
+    padding: 0.5rem;
+    border: none;
+    background: white;
+    font-size: 1.5rem;
+}
+
+form button {
+    color: rgb(247, 239, 239);
+    background: rgb(238, 0, 0);
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    color: rgb(253, 0, 0);
+    background: rgb(8, 8, 8);
+}
+
+.tarea
+{
+    background: white;
+    color: rgb(12, 12, 12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem;
+    min-height: 40%;
+    transition: all 0.3s ease;
+    
+}
+
+.tarea li
+{
+    flex: 1;
+}
+
+.nuevaTarea
+{
+    list-style: none;
+    margin-left: 1rem;
+}
+
+.completada, .eliminar
+{
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    background: white;
+    padding: 0.5rem;
+}
+
+.completada
+{
+    color: green;
+}
+
+.completada:hover
+{
+    color:white;
+    background: green;
+}
+
+.eliminar
+{
+    color: red;
+    background: white;
+}
+
+.eliminar:hover
+{
+    color:white;
+    background: red;
+}
+
+.tareaCompletada
+{
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.tareaEliminada
+{
+    opacity: 0;
+    transform: translateY(8rem) rotateZ(20deg);
+}
+
+select
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+
+}
+
+.lista
+{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.lista::after
+{
+    content: '\25BC';
+    background: rgb(212, 0, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.lista:hover::after
+{
+    background: rgb(0, 0, 0);
+    color: rgb(255, 0, 0);
+}
